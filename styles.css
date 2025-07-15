@@ -1,0 +1,13 @@
+
+body { margin:0; font-family:'Segoe UI'; background:#f4fff4; color:#2e4d2e; }
+header { background:#c8fcd8; text-align:center; padding:1rem; font-size:1.5rem; position:sticky; top:0; }
+.container{padding:1rem; margin-bottom:60px; position:relative;}
+.tab{ display:none; opacity:0; transform: translateY(20px); transition: all .4s ease; }
+.tab.active{display:block; opacity:1; transform: translateY(0); }
+.bottom-nav{ display:flex; justify-content:space-around; position:fixed; bottom:0;width:100%;background:#d9fcd9;border-top:1px solid #b6eab6;padding:.5rem 0;}
+.nav-btn{background:none;border:none;font-size:1.5rem;cursor:pointer;color:#2b4d2b; position:relative; }
+.nav-btn::after{ content:""; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:0; height:3px; background:#2b4d2b; transition:width .3s; }
+.nav-btn.active::after{ width:60%; }
+#auth{ position:fixed; bottom:60px;width:100%;background:#eaffea;padding:1rem; display:flex; flex-direction:column; }
+.gallery img{ width:80px; margin:.3rem; border-radius:10px; }
+progress{ width:100%; margin-top:.5rem; }

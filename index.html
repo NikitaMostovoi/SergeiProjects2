@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Осколки Мироздания</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-storage-compat.js"></script>
+</head>
+<body>
+  <header>Осколки Мироздания</header>
+  <div class="container">
+    <section id="home" class="tab active"><h2>Главная</h2><div id="feed"></div></section>
+    <section id="guides" class="tab"><h2>Гайды</h2><ul><li>Персонажи</li><li>Оружие</li><li>Концерт</li><li>Чёрная Дыра</li></ul></section>
+    <section id="add" class="tab"><h2>Создать пост</h2><input type="file" id="photoInput"><button id="postBtn">Опубликовать</button><progress id="uploadProgress" value="0" max="100"></progress></section>
+    <section id="notifications" class="tab"><h2>Уведомления</h2><ul id="notifs"></ul></section>
+    <section id="profile" class="tab"><h2>Профиль</h2><div id="userInfo"></div><div id="userChars"></div><div id="userPhotos" class="gallery"></div></section>
+  </div>
+  <nav class="bottom-nav">
+    <button data-tab="home" class="nav-btn active">🏠</button>
+    <button data-tab="guides" class="nav-btn">📚</button>
+    <button data-tab="add" class="nav-btn">➕</button>
+    <button data-tab="notifications" class="nav-btn">🔔</button>
+    <button data-tab="profile" class="nav-btn">👤</button>
+  </nav>
+  <div id="auth">
+    <input id="email" placeholder="Email"><input id="password" type="password" placeholder="Пароль">
+    <button id="regBtn">Регистрация</button><button id="loginBtn">Войти</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
